@@ -11,7 +11,7 @@ type Args struct {
 }
 
 func main() {
-        args := Args{5, 2}
+        args := &Args{6, 5}
         var reply int
         
         client, err := rpc.Dial("tcp", "localhost:3000")  // connet to a rpc server

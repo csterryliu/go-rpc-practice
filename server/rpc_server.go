@@ -6,11 +6,12 @@ import (
         "fmt"
 )
 
-type Arith int   // you can consider it as a service of RPC
 type Args struct {
         A int
         B int
 }
+
+type Arith int   // you can consider it as a service of RPC
 func (a *Arith) Add(args *Args, reply *int) error {  // a method of service
         *reply = args.A + args.B
         return nil
